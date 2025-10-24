@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="" />
+        <title>Mi Portafolio</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <meta name="theme-color" content="#712cf9" />
+        <link href="style.css" rel="stylesheet" />
+    <head>
+    <body>
+        <header>
+            <div class="collapse text-bg-dark" id="navbarHeader">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 col-md-7 py-4">
+                            <h4>Sobre este portafolio</h4>
+                            <p class="text-body-secondary">
+                                Esta es una recopilación de mis proyectos que he realizado a lo largo de la carrera de Diseño en la Pontificia Universidad Católica de Chile (PUC).
+                            </p>
+                        </div>
+                        <div class="col-sm-4 offset-md-1 py-4">
+                            <h4 class="ms-2">Habilidades</h4>
+                             <table id="aqui" class="table table-hover table-borderless"></table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar navbar-dark bg-dark shadow-sm">
+                <div class="container">
+                    <a href="#" class="navbar-brand d-flex align-items-center">
+                            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                            <circle cx="12" cy="13" r="4"></circle>
+                        </svg>
+                        <strong>Portafolio</strong>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <main>
+            <<section class="py-5 text-center" style="background-image: url('img/cover.webp');background-size: cover; background-position: center;">
+                <div class="row py-lg-5">
+                    <div class="col-lg-6 col-md-8 mx-auto">
+                        <h1 class="fw-light">Javiera Valdebenito</h1>
+                        <p class="lead text-body-secondary">✧˖°.- Diseñadora Integral -.°˖✧</p>
+                        <p><a href="mailto:javiera.valdebenitoga@gmail.com" class="btn btn-personal my-2">Hablemos</a> <a href="https://www.linkedin.com/in/javiera-valdebenito-045803289/" class="btn btn-light my-2 ">Ver Perfil</a></p>
+                    </div>
+                </div>
+            </section>
+            <div class="album py-5 bg-body-tertiary">
+                <div class="container">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="miau"> </div>
+                </div>
+            </div>
+        </main>
+        <footer class="text-body-secondary py-5">
+            <div class="container">
+                <p class="float-end mb-1"><a href="#">Volver arriba</a></p>
+                <p class="mb-1">Por Isabel Puelma © 2025</p>
+                <p class="mb-0">Visita mi perfil de <a href=""https://www.instagram.com/jabitakora/>Instagram </a></p>
+            </div>
+        </footer>
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+         <script src="script.js" table id="aqui" class="table table-hover table-habilidades"></table></script>
+         <script>
+             const habilidades = [
+                {programa:"Photoshop",valor: "50", color:"#a4ba16"},
+                {programa:"Illustrator",valor: "70", color:"#a4ba16"},
+                {programa:"Figma",valor: "100", color:"#a4ba16"},
+                {programa:"Twinmotion",valor: "30", color:"#a4ba16"},
+             ]
+
+             const donde = document.querySelector ("#aqui");
+
+             habilidades.forEach((h)=>{
+                donde.innerHTML += ` <tr>
+                <td class="w-25">${h.programa}</td>
+                <td>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 5">
+                   <rect width="${h.valor}" height="10" fill="#a4ba16" rx="2" ry="2"/> 
+                  </svg>
+                </td>
+                </tr>`;
+            });
+         </script>
+    </body>
+</html>
